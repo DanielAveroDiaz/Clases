@@ -1,0 +1,128 @@
+/* --- Estructura Principal del Layout (CSS Grid) --- */
+.layout-contenedor {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 15px;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 15px;
+  border: 2px solid #cbd5e1;
+  border-radius: 12px;
+  font-family: system-ui, sans-serif;
+  background-color: #f8fafc;
+  transition: grid-template-columns 0.3s ease;
+}
+
+
+/* Layout con barra lateral colapsada */
+.layout-contenedor.sidebar-colapsado {
+  grid-template-columns: 70px 1fr;
+}
+
+
+/* --- Cabecera --- */
+.layout-header {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: #1e293b;
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+
+.layout-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+
+/* --- Barra Lateral (Sidebar) --- */
+.layout-sidebar {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.btn-toggle-sidebar {
+  padding: 8px 12px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+/* --- Panel Central / Galería Dinámica --- */
+.contenedor-tarjetas {
+  display: grid;
+  gap: 15px;
+  transition: all 0.3s ease;
+}
+
+
+/* Estado 1: Vista Rejilla (Grid de 3 columnas) */
+.contenedor-tarjetas.vista-rejilla {
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+}
+
+
+/* Estado 2: Vista Lista (1 sola columna vertical) */
+.contenedor-tarjetas.vista-lista {
+  grid-template-columns: 1fr;
+}
+
+
+/* --- Tarjeta / Control Visual --- */
+.tarjeta-item {
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+
+.contenedor-tarjetas.vista-lista .tarjeta-item {
+  flex-direction: row;
+  align-items: center;
+}
+
+
+.badge-estado {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+.badge-activo {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+
+.badge-pendiente {
+  background-color: #fef9c3;
+  color: #854d0e;
+}
+
+.tarjeta-item[hidden] {
+  display: none !important;
+}

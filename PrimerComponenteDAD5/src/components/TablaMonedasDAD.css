@@ -1,0 +1,109 @@
+/* --- Contenedor Principal --- */
+.tabla-contenedor {
+  max-width: 750px;
+  margin: 25px auto;
+  padding: 20px;
+  font-family: system-ui, sans-serif;
+  background-color: #ffffff;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+
+.cabecera-tabla {
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+/* --- Panel del Conversor / Entrada de Datos --- */
+.panel-conversor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background-color: #f8fafc;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #cbd5e1;
+}
+
+
+.panel-conversor label {
+  font-weight: bold;
+  color: #334155;
+}
+
+
+.panel-conversor input {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 1px solid #94a3b8;
+  border-radius: 6px;
+  width: 120px;
+  text-align: right;
+  font-weight: bold;
+}
+
+
+/* --- Estilo de Tabla HTML --- */
+.tabla-cotizaciones {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+
+.tabla-cotizaciones th,
+.tabla-cotizaciones td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+
+.tabla-cotizaciones th {
+  background-color: #1e293b;
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+
+
+.tabla-cotizaciones tr:hover {
+  background-color: #f1f5f9;
+}
+
+
+/* --- Badges de Tendencia --- */
+.badge-tendencia {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+
+.tendencia-subida {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+
+.tendencia-bajada {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+
+/* --- Asignaciones Temáticas por Inicial --- */
+.tema-verde .panel-conversor { border-left: 5px solid #10b981; }
+.tema-azul .panel-conversor { border-left: 5px solid #3b82f6; }
+.tema-violeta .panel-conversor { border-left: 5px solid #8b5cf6; }
