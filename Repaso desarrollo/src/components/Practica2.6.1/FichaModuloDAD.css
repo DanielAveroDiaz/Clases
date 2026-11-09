@@ -1,0 +1,40 @@
+
+.ficha-modulo {
+    background-color: #17181c;
+    border: 1px solid #355477;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 15px 0;
+    text-align: center;
+    color: #aeb4c0;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.ficha-modulo h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 28px;
+    color: #aeb4c0;
+}
+
+.ficha-modulo p {
+    font-size: 22px;
+    margin: 8px 0;
+}
+
+.ficha-modulo strong {
+    font-weight: bold;
+}
+
+.estado-apto {
+    color: #008000;
+    font-size: 23px !important;
+    margin-top: 12px !important;
+}
+
+.estado-no-apto {
+    color: #ff4444;
+    font-size: 23px !important;
+    margin-top: 12px !important;
+}

@@ -1,0 +1,103 @@
+/* --- Contenedor Principal --- */
+.relojes-contenedor {
+  max-width: 800px;
+  margin: 25px auto;
+  padding: 25px;
+  font-family: system-ui, sans-serif;
+  background-color: #f8fafc;
+  border: 2px solid #cbd5e1;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.cabecera-relojes {
+  text-align: center;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+/* --- Panel Superior de Estado --- */
+.panel-estado-tiempo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e293b;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.indicador-pulso {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  margin-right: 8px;
+  animation: parpadeo-pulso 1s infinite;
+}
+
+@keyframes parpadeo-pulso {
+  0% { opacity: 1; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+/* --- Grilla de Tarjetas de Relojes --- */
+.grilla-relojes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.tarjeta-reloj {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.tarjeta-reloj:hover {
+  transform: translateY(-3px);
+}
+
+.tarjeta-reloj.destacada {
+  border: 2px solid #3b82f6;
+  background-color: #eff6ff;
+}
+
+.nombre-ciudad {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #0f172a;
+  margin-bottom: 5px;
+}
+
+.zona-horaria {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+.visor-hora {
+  font-family: monospace;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1e293b;
+  background-color: #f1f5f9;
+  padding: 8px 12px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+/* --- Temas según Inicial --- */
+.tema-tokio .tarjeta-reloj.destacada { border-color: #ef4444; background-color: #fef2f2; }
+.tema-ny .tarjeta-reloj.destacada { border-color: #3b82f6; background-color: #eff6ff; }
+.tema-londres .tarjeta-reloj.destacada { border-color: #10b981; background-color: #ecfdf5; }

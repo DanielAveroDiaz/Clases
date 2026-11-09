@@ -1,0 +1,161 @@
+/* --- Contenedor Principal --- */
+.panel-contenedor {
+  max-width: 650px;
+  margin: 25px auto;
+  padding: 25px;
+  font-family: system-ui, sans-serif;
+  background-color: #ffffff;
+  border: 2px solid #cbd5e1;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+
+.cabecera-panel {
+  text-align: center;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+}
+
+
+/* --- Componente MostrarInput --- */
+.card-input {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 18px;
+  margin-bottom: 15px;
+}
+
+
+.input-controlado {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 1rem;
+  border: 2px solid #94a3b8;
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+
+.input-controlado:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+
+/* --- Componente OperarBotones --- */
+.card-botones {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 18px;
+  margin-bottom: 20px;
+}
+
+
+.grid-operaciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+
+.btn-operacion {
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+
+.btn-operacion:hover:not(:disabled) {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+
+.btn-operacion:disabled {
+  background-color: #cbd5e1 !important;
+  color: #94a3b8 !important;
+  cursor: not-allowed;
+}
+
+
+/* --- Estilos por Defecto para Botones --- */
+.btn-mayus { background-color: #3b82f6; color: white; }
+.btn-minus { background-color: #0284c7; color: white; }
+.btn-invertir { background-color: #8b5cf6; color: white; }
+.btn-especial { background-color: #d97706; color: white; }
+.btn-limpiar { background-color: #ef4444; color: white; }
+
+
+/* --- Vista Previa del Estado --- */
+.card-visor {
+  background-color: #0f172a;
+  color: #f8fafc;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+
+.texto-resultado {
+  font-size: 1.4rem;
+  font-weight: bold;
+  word-break: break-word;
+  color: #38bdf8;
+}
+
+
+/* Temas según Inicial */
+.tema-rojo .input-controlado:focus { border-color: #ef4444; }
+.tema-azul .input-controlado:focus { border-color: #3b82f6; }
+.tema-verde .input-controlado:focus { border-color: #10b981; }
+
+/* --- Barra de Estadísticas --- */
+.barra-estadisticas {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f1f5f9;
+  color: #334155;
+  padding: 12px;
+  margin-top: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.barra-estadisticas strong {
+  color: #2563eb;
+  font-size: 1.05rem;
+}
+
+/* --- Botón Deshacer --- */
+.btn-deshacer {
+  background-color: #475569;
+  color: white;
+}
+
+.btn-deshacer:hover:not(:disabled) {
+  background-color: #334155;
+}
+
+/* --- Mensaje de Palíndromo --- */
+.mensaje-palindromo {
+  background-color: #dcfce7;
+  color: #15803d;
+  border: 1px solid #86efac;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 12px;
+  text-align: center;
+  font-weight: bold;
+}

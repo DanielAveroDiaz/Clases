@@ -1,0 +1,161 @@
+/* --- Contenedor Principal --- */
+.gestion-contenedor {
+  max-width: 900px;
+  margin: 25px auto;
+  padding: 25px;
+  font-family: system-ui, sans-serif;
+  background-color: #ffffff;
+  border: 2px solid #cbd5e1;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.cabecera-gestion {
+  text-align: center;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+/* --- Layout de dos columnas --- */
+.layout-personas {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .layout-personas {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Formulario EditarUsuario --- */
+.card-formulario {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 18px;
+  height: fit-content;
+}
+
+.card-formulario.modo-edicion {
+  border: 2px solid #f59e0b;
+  background-color: #fffbeb;
+}
+
+.campo-grupo {
+  margin-bottom: 12px;
+}
+
+.campo-grupo label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #334155;
+  margin-bottom: 4px;
+}
+
+.campo-input, .campo-select {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 0.9rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.panel-botones-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.btn-guardar {
+  flex: 1;
+  padding: 9px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-cancelar {
+  padding: 9px 12px;
+  background-color: #64748b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* --- Rejilla de PersonaCard --- */
+.rejilla-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 15px;
+}
+
+.tarjeta-persona {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-color 0.2s;
+}
+
+.tarjeta-persona.en-edicion {
+  border: 2px solid #f59e0b;
+}
+
+.persona-header {
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+
+.persona-nombre {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #0f172a;
+}
+
+.persona-dept {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.persona-email {
+  font-size: 0.85rem;
+  color: #334155;
+  margin-bottom: 12px;
+  word-break: break-all;
+}
+
+.acciones-tarjeta {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.btn-accion-card {
+  padding: 6px 10px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-editar-card { background-color: #f59e0b; color: white; }
+.btn-eliminar-card { background-color: #ef4444; color: white; }
+
+/* --- Temas según Inicial --- */
+.tema-esmeralda .btn-guardar { background-color: #10b981; }
+.tema-indigo .btn-guardar { background-color: #6366f1; }
+.tema-ambar .btn-guardar { background-color: #d97706; }

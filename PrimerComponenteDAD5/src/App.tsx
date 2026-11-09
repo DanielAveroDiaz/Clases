@@ -1,10 +1,10 @@
-import { EjStateByPropsDAD } from "./components/EjStateByPropsDAD";
+import { TablaMonedasDAD } from "./components/TablaMonedasDAD";
 
 
 function App() {
   return (
     <main>
-      <EjStateByPropsDAD/>
+      <TablaMonedasDAD/>
     </main>
   );
 }

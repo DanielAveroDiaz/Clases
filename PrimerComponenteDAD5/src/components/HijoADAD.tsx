@@ -6,6 +6,7 @@ export interface UsuarioRegistro {
   id: number;
   nombre: string;
   rol: string;
+  activo: boolean;
 }
 
 
@@ -38,6 +39,7 @@ export function HijoADAD({ onAgregarUsuario, rolPredeterminado }: HijoAProps) {
       id: Date.now(),
       nombre: nombreLimpio,
       rol: rolInput,
+      activo: true
     };
 
 

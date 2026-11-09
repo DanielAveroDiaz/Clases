@@ -1,0 +1,250 @@
+/* --- Contenedor Principal --- */
+.tabla-contenedor {
+  max-width: 750px;
+  margin: 25px auto;
+  padding: 20px;
+  font-family: system-ui, sans-serif;
+  background-color: #ffffff;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.cabecera-tabla {
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+
+/* --- Panel del Conversor --- */
+.panel-conversor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background-color: #f8fafc;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #cbd5e1;
+}
+
+.panel-conversor label {
+  font-weight: bold;
+  color: #334155;
+}
+
+.panel-conversor input {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 1px solid #94a3b8;
+  border-radius: 6px;
+  width: 120px;
+  text-align: right;
+  font-weight: bold;
+}
+
+
+/* --- Panel del Filtro de Tendencia --- */
+.panel-filtro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f1f5f9;
+  padding: 8px 10px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.panel-filtro label {
+  font-weight: bold;
+  color: #334155;
+}
+
+.botones-filtro {
+  display: flex;
+  gap: 6px;
+}
+
+.botones-filtro button {
+  padding: 6px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #334155;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.botones-filtro button:hover {
+  background-color: #e2e8f0;
+}
+
+.botones-filtro .filtro-activo {
+  background-color: #1e293b;
+  color: #ffffff;
+  border-color: #1e293b;
+}
+
+
+/* --- Formulario para Añadir Nueva Divisa --- */
+.formulario-moneda {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  padding: 12px;
+  margin-bottom: 15px;
+  background-color: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+}
+
+/* Título del formulario */
+.formulario-moneda h3 {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 1rem;
+  color: #1e293b;
+  margin: 0 0 2px 0;
+}
+
+/* Campos de entrada */
+.formulario-moneda input,
+.formulario-moneda select {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 6px;
+  font-size: 0.85rem;
+  font-family: inherit;
+  color: #ffffff;
+  background-color: #3f3f3f;
+  border: 1px solid #64748b;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Texto de los campos */
+.formulario-moneda input::placeholder {
+  color: #a1a1aa;
+  opacity: 1;
+}
+
+/* Selector de tendencia */
+.formulario-moneda select {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Efecto al seleccionar un campo */
+.formulario-moneda input:focus,
+.formulario-moneda select:focus {
+  border-color: #0284c7;
+}
+
+/* Botón Añadir Divisa */
+.boton-anadir {
+  grid-column: 1 / -1;
+  width: 100%;
+  padding: 7px 10px;
+  background-color: #0284c7;
+  color: #ffffff;
+  border: 2px solid #1e293b;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+/* Efecto al pasar el ratón */
+.boton-anadir:hover {
+  background-color: #0369a1;
+}
+
+
+/* --- Estilo de Tabla HTML --- */
+.tabla-cotizaciones {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.tabla-cotizaciones th,
+.tabla-cotizaciones td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.tabla-cotizaciones th {
+  background-color: #1e293b;
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+
+.tabla-cotizaciones tr:hover {
+  background-color: #f1f5f9;
+}
+
+
+/* --- Badges de Tendencia --- */
+.badge-tendencia {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.tendencia-subida {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.tendencia-bajada {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+
+/* --- Asignaciones Temáticas por Inicial --- */
+.tema-verde .panel-conversor {
+  border-left: 5px solid #10b981;
+}
+
+.tema-azul .panel-conversor {
+  border-left: 5px solid #3b82f6;
+}
+
+.tema-violeta .panel-conversor {
+  border-left: 5px solid #8b5cf6;
+}
+
+
+/* --- Adaptación para pantallas pequeñas --- */
+@media (max-width: 600px) {
+  .formulario-moneda {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .formulario-moneda h3,
+  .boton-anadir {
+    grid-column: 1 / -1;
+  }
+
+  .panel-filtro {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .tabla-cotizaciones th,
+  .tabla-cotizaciones td {
+    padding: 8px 5px;
+    font-size: 0.75rem;
+  }
+}
